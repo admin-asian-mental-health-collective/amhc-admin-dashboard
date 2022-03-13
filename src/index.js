@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
+import Layout from './components/Layout';
 
 ReactDOM.render(
   <Layout>
