@@ -1,13 +1,21 @@
 import ReactDOM from 'react-dom';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
+import NotFound from './pages/NotFound';
 
 ReactDOM.render(
   <Layout>
     <BrowserRouter>
-      <App />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   </Layout>,
   document.getElementById('root')
