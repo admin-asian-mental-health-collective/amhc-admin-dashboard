@@ -8,18 +8,17 @@ import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 
 ReactDOM.render(
-  <Layout>
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </HashRouter>
-  </Layout>,
-  document.getElementById('root')
+    <Layout>
+        <HashRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </HashRouter>
+    </Layout>,
+    document.getElementById('root')
 );
-
 
 reportWebVitals();
