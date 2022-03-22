@@ -1,0 +1,28 @@
+name: ⚡ CI/CD 🚀
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  integration-deployment:
+    name: ⚡ Integration & Deployment 🚀
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+      - name: Setup 🏗️
+        run: npm install
+      - name: Unit Tests 🎉
+        run: npm run test
+      - name: Build React Project 🛠️
+        run: npm run build
+      - name: Build Storybook 📖
+        run: npm run build-storybook
+      - name: Deploy to GitHub Pages 📄
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build
