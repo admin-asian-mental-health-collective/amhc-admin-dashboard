@@ -26,10 +26,10 @@
     "scripts": {
         "start": "craco start",
         "build": "craco build",
-        "test": "craco test",
+        "test": "craco test --passWithNoTests",
         "eject": "craco eject",
         "storybook": "start-storybook -p 6006 -s public",
-        "build-storybook": "build-storybook -s public",
+        "build-storybook": "build-storybook -s ./build/storybook",
         "lint": "eslint --ext .js,.ts,.tsx ./src",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build"
