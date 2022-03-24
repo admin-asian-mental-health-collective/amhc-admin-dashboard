@@ -14,7 +14,7 @@ ReactDOM.render(
                 <Route path="/" element={<Home />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<NotFound />} />
             </Routes>
         </HashRouter>
     </Layout>,
