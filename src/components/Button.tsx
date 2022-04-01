@@ -1,23 +1,23 @@
 import { ReactChild } from 'react';
 import styled from 'styled-components';
 
-interface Props {
+export interface ButtonProps {
 	children: ReactChild;
 }
 
-const Button = ({ children }: Props) => {
+export const Button = ({ children, ...args }: ButtonProps) => {
 	const Element = styled.button`
 		background: ${({ theme }) => theme.colors.blue};
 		border-radius: 100px;
 		cursor: pointer;
-		text-transform: lowercase;
 		border: none;
 		color: ${({ theme }) => theme.colors.white};
-		margin: 0.5em 1em;
-		padding: 0.25em 1em;
-		font-size: 16px;
+		padding: ${({ theme }) => theme.spacings.md}
+			${({ theme }) => theme.spacings.lg};
+		font-size: ${({ theme }) => theme.fonts.size};
+		font-family: ${({ theme }) => theme.fonts.family};
 	`;
-	return <Element>{children}</Element>;
+	return <Element {...args}>{children}</Element>;
 };
 
 export default Button;
