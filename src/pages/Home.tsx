@@ -3,7 +3,7 @@ import Button from '@/components/Button';
 const Home = () => {
 	return (
 		<div className="Home">
-			<Button>Test 123</Button>
+			<Button onClick={() => console.log(true)}>Test 123</Button>
 		</div>
 	);
 };

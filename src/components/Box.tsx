@@ -1,41 +1,28 @@
 import { ReactChild } from 'react';
+import CSS from 'csstype';
 import styled from 'styled-components';
 
 export interface BoxProps {
 	children: ReactChild[] | ReactChild;
-	columns?: string;
-	rows?: string;
-	justifyContent?: 'center' | 'left' | 'right';
-	textAlign?: 'center' | 'left' | 'right';
-	gridGap?: string;
+	as?: 'header' | 'footer' | 'div' | 'section' | 'article';
+	id?: string;
+	style?: CSS.Properties;
 }
 
-export const Box = ({
-	children,
-	columns,
-	rows,
-	justifyContent,
-	textAlign,
-	gridGap,
-	...args
-}: BoxProps) => {
-	const Element = styled.div`
-		padding: 0;
-		margin: 0;
-		grid-template-columns: ${columns || '1fr'};
-		grid-template-rows: ${rows || '1fr'};
-		display: grid;
-		gridgap: ${gridGap || '0'};
-		justify-content: ${justifyContent || 'left'};
-		text-align: ${textAlign || 'left'};
-		box-sizing: border-box;
-		font-family: ${({ theme }) => theme.fonts.family};
-		font-size: ${({ theme }) => theme.fonts.size};
-	`;
+const PrimaryBox = styled.div`
+	padding: 0;
+	margin: 0;
+	display: grid;
+	box-sizing: border-box;
+	font-family: ${({ theme }) => theme?.fonts?.family};
+	font-size: ${({ theme }) => theme?.fonts?.size};
+`;
+
+export const Box = ({ children, as, style, ...args }: BoxProps) => {
 	return (
-		<Element {...args}>
+		<PrimaryBox {...args} as={as} style={style}>
 			{Array.isArray(children) ? [...children] : children}
-		</Element>
+		</PrimaryBox>
 	);
 };
 
