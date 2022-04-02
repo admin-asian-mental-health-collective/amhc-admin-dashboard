@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/amhc-admin-dashboard/static/js/main.71fc12dc.js",
+    "main.js": "/amhc-admin-dashboard/static/js/main.1fc76768.js",
     "static/js/787.9a4653c6.chunk.js": "/amhc-admin-dashboard/static/js/787.9a4653c6.chunk.js",
     "index.html": "/amhc-admin-dashboard/index.html",
-    "main.71fc12dc.js.map": "/amhc-admin-dashboard/static/js/main.71fc12dc.js.map",
+    "main.1fc76768.js.map": "/amhc-admin-dashboard/static/js/main.1fc76768.js.map",
     "787.9a4653c6.chunk.js.map": "/amhc-admin-dashboard/static/js/787.9a4653c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.71fc12dc.js"
+    "static/js/main.1fc76768.js"
   ]
 }
