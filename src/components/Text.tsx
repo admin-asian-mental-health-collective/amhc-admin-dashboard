@@ -6,14 +6,19 @@ export interface TextProps {
 	as?: 'p' | 'span';
 }
 
+const PrimaryText = styled.span`
+	padding: 0;
+	margin: 0;
+	font-family: ${({ theme }) => theme?.fonts?.family};
+	font-size: ${({ theme }) => theme?.fonts?.size};
+`;
+
 export const Text = ({ children, as, ...args }: TextProps) => {
-	const Element = styled[as || 'span']`
-		padding: 0;
-		margin: 0;
-		font-family: ${({ theme }) => theme.fonts.family};
-		font-size: ${({ theme }) => theme.fonts.size};
-	`;
-	return <Element {...args}>{children}</Element>;
+	return (
+		<PrimaryText {...args} as={as}>
+			{children}
+		</PrimaryText>
+	);
 };
 
 export default Text;

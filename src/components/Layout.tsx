@@ -1,5 +1,6 @@
 import Header from '@components/Header';
 import Footer from '@components/Footer';
+import Box from '@components/Box';
 
 type Props = {
 	children: JSX.Element;
@@ -7,11 +8,11 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
 	return (
-		<div className="content">
+		<Box>
 			<Header />
 			{children}
 			<Footer />
-		</div>
+		</Box>
 	);
 };
 
