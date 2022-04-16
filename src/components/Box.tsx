@@ -7,23 +7,25 @@ export interface BoxProps {
 	as?: 'header' | 'footer' | 'div' | 'section' | 'article';
 	id?: string;
 	style?: CSS.Properties;
+	className?: string;
 }
 
-const PrimaryBox = styled.div`
+const Box = styled(({ className, children, as, ...args }: BoxProps) => {
+	let Elem = as || 'div';
+	return (
+		<Elem className={className} {...args}>
+			{Array.isArray(children) ? [...children] : children}
+		</Elem>
+	);
+})(
+	({ theme }) => `
 	padding: 0;
 	margin: 0;
 	display: grid;
 	box-sizing: border-box;
-	font-family: ${({ theme }) => theme?.fonts?.family};
-	font-size: ${({ theme }) => theme?.fonts?.size};
-`;
-
-export const Box = ({ children, as, style, ...args }: BoxProps) => {
-	return (
-		<PrimaryBox {...args} as={as} style={style}>
-			{Array.isArray(children) ? [...children] : children}
-		</PrimaryBox>
-	);
-};
+	font-family: ${theme?.fonts?.family};
+	font-size: ${theme?.fonts?.size};
+`
+);
 
 export default Box;
