@@ -10,11 +10,12 @@ export interface BoxProps {
 	className?: string;
 }
 
-const Box = styled(({ className, children, ...args }: BoxProps) => {
+const Box = styled(({ className, children, as, ...args }: BoxProps) => {
+	let Elem = as || 'div';
 	return (
-		<div className={className} {...args}>
+		<Elem className={className} {...args}>
 			{Array.isArray(children) ? [...children] : children}
-		</div>
+		</Elem>
 	);
 })(
 	({ theme }) => `
