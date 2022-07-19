@@ -1,8 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Box from '@components/Box';
-import Text from '@components/Text';
-import Button from '@components/Button';
+import Box from '../components/Box';
+import Text from '../components/Text';
+import Button from '../components/Button';
 
 export default {
 	title: 'Atoms/Box',
