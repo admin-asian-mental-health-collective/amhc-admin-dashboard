@@ -1,4 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import disabled from './constants/disabled';
 
 import Box from '../components/Box';
 import Text from '../components/Text';
@@ -7,6 +8,7 @@ import Button from '../components/Button';
 export default {
 	title: 'Atoms/Box',
 	component: Box,
+	argTypes: { ...disabled },
 } as ComponentMeta<typeof Box>;
 
 const Template: ComponentStory<typeof Box> = (args) => (
