@@ -14,4 +14,25 @@ const Template: ComponentStory<typeof Button> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+	secondary: false,
+	outlined: false,
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+	secondary: true,
+	outlined: false,
+};
+
+export const OutlinedPrimary = Template.bind({});
+OutlinedPrimary.args = {
+	secondary: false,
+	outlined: true,
+};
+
+export const OutlinedSecondary = Template.bind({});
+OutlinedSecondary.args = {
+	secondary: true,
+	outlined: true,
+};

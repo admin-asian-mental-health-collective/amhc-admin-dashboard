@@ -18,14 +18,22 @@ const Box = styled(({ className, children, as, ...args }: BoxProps) => {
 		</Elem>
 	);
 })(
-	({ theme }) => `
-	padding: 0;
-	margin: 0;
-	display: grid;
-	box-sizing: border-box;
-	font-family: ${theme?.fonts?.family};
-	font-size: ${theme?.fonts?.size};
-`
+	({
+		theme: {
+			fonts: { family, size },
+		},
+	}) => `
+		padding: 0;
+		margin: 0;
+		display: block;
+		box-sizing: border-box;
+		font-family: ${family};
+		font-size: ${size};
+	`
 );
+
+Box.defaultProps = {
+	as: 'div'
+}
 
 export default Box;

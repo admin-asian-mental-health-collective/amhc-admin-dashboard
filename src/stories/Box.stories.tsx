@@ -2,8 +2,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import disabled from './constants/disabled';
 
 import Box from '../components/Box';
-import Text from '../components/Text';
 import Button from '../components/Button';
+import Text from '../components/Text';
 
 export default {
 	title: 'Atoms/Box',
@@ -12,12 +12,13 @@ export default {
 } as ComponentMeta<typeof Box>;
 
 const Template: ComponentStory<typeof Box> = (args) => (
-	<Box {...args}>
-		<Box style={{ textAlign: 'center' }}>
+	<Box {...args} style={{ textAlign: 'center' }}>
+		<Box style={{ paddingBottom: '15px' }}>
 			<Text>Hello World</Text>
 		</Box>
 		<Box>
-			<Button onClick={() => console.log(true)}>Hello World</Button>
+			<Button>Hello World</Button>
+			<Button secondary={true}>Hello World</Button>
 		</Box>
 	</Box>
 );
