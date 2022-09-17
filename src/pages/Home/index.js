@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
 
-export default function PageNotFound() {
-	return <div id="page-not-found">Page Not Found</div>;
+export default function Home() {
+	return <div id="home">Home Page</div>;
 }
