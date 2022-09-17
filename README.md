@@ -29,9 +29,10 @@ Components have their own directory (that is named using a capitalized first let
 ```jsx
 
 import React from 'react';
+import Box from '../../atoms/Box';
 
 export default MyComponent() {
-	return (<div id="my-component"></div>);
+	return (<Box className="my-component"></Box>);
 }
 
 ```
@@ -41,7 +42,7 @@ export default MyComponent() {
 The theme that contains all of our design tokens is accessible within any component style file using CSS variables.
 
 ```css
-div#my-component {
+.my-component {
 	background-color: var(--green);
 }
 ```

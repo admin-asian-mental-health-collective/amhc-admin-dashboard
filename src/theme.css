@@ -1,16 +1,25 @@
+@charset "UTF-8";
+
 :root {
-	/* primary */
-	--green: '#009896';
-	--pink: '#EFB6BA';
-	--blue: '#58C2DA';
-	/* other */
-	--indigo: '#6610f2';
-	--orange: '#fd7e14';
-	--purple: '#6f42c1';
-	--red: '#dc3545';
-	--teal: '#20c997';
-	/* base */
-	--gray: '#6c757d';
-	--white: '#fff';
-	--black: '#000';
+	/* colors */
+	--green: #009896;
+	--pink: #efb6ba;
+	--blue: #58c2da;
+	--indigo: #6610f2;
+	--orange: #fd7e14;
+	--purple: #6f42c1;
+	--red: #dc3545;
+	--teal: #20c997;
+	--gray: #6c757d;
+	--white: #fff;
+	--black: #000;
+	/* spacings */
+	--xsm: 5px;
+	--sm: 8px;
+	--md: 12px;
+	--lg: 25px;
+	--xlg: 50px;
+	/* logos */
+	--logo: url('./assets/logo512.png');
+	--full-logo: url('./assets/banner-logo.png');
 }
