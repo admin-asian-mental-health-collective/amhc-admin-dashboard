@@ -12,6 +12,12 @@ import BannerLogo from '../../../assets/banner-logo.png';
 export default function Navigation() {
 	return (
 		<nav>
+			<Box>
+				<Link to="/amazon-smile-setup/">
+					Help AMHC and choose us as your Amazon Smile Charity! Click
+					for instructions.
+				</Link>
+			</Box>
 			<Grid>
 				<Box>
 					<Link to="/">

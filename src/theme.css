@@ -3,6 +3,10 @@ body {
 	font-family: 'Karla', sans-serif;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 :root {
 	/* colors */
 	--green: #009896;

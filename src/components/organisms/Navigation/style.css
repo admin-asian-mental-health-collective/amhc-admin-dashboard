@@ -1,9 +1,18 @@
 nav {
 	background-color: var(--white);
+}
+
+nav > .box:nth-child(1) {
+	background-color: var(--blue);
 	padding: var(--md);
+	color: var(--white);
+	text-align: center;
+	font-weight: bold;
 }
 
 nav > .grid {
+	display: grid;
+	padding: var(--md);
 	grid-template-columns: auto 1fr auto;
 	grid-gap: var(--lg);
 	justify-self: center;
