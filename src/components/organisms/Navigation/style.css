@@ -5,6 +5,18 @@ nav {
 
 nav > .grid {
 	grid-template-columns: auto 1fr auto;
+	grid-gap: var(--lg);
+	justify-self: center;
+	align-items: center;
+}
+
+nav > .grid > .box:nth-child(2) {
+	text-align: right;
+}
+
+nav > .grid > .box > .link {
+	color: var(--blue);
+	margin-left: var(--md);
 }
 
 nav > .grid > .box > .link > .logo {
