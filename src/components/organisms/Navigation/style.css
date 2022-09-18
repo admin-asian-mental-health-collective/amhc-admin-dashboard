@@ -1,1 +1,12 @@
-nav {}
+nav {
+	background-color: var(--white);
+	padding: var(--md);
+}
+
+nav > .grid {
+	grid-template-columns: auto 1fr auto;
+}
+
+nav > .grid > .box > .link > .logo {
+	width: 170px;
+}

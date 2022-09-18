@@ -1,11 +1,14 @@
 import React from 'react';
 import './style.css';
+import concatClassName from '../../../helpers/classNameConcat';
 
-export default function Text({ as, children, ...rest }) {
+function Text({ as, className, children, ...rest }) {
 	const Elem = as ? as : 'p';
 	return (
-		<Elem className="text" {...rest}>
+		<Elem className={concatClassName('text', className)} {...rest}>
 			{children}
 		</Elem>
 	);
 }
+
+export default Text;

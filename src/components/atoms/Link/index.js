@@ -1,14 +1,24 @@
 import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
+import concatClassName from '../../../helpers/classNameConcat';
 import './style.css';
 
-const Link = ({ to, children, ...rest }) =>
+const Link = ({ to, className, children, ...rest }) =>
 	/(http(s?)):\/\//i.test(to) ? (
-		<a to={to} className="link" {...rest}>
+		<a
+			href={to}
+			className={concatClassName('link', className)}
+			target="_blank"
+			{...rest}
+		>
 			{children}
 		</a>
 	) : (
-		<ReactRouterLink to={to} className="link" {...rest}>
+		<ReactRouterLink
+			to={to}
+			className={concatClassName('link', className)}
+			{...rest}
+		>
 			{children}
 		</ReactRouterLink>
 	);
