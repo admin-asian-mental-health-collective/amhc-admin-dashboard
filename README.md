@@ -27,14 +27,12 @@ Please follow these guidelines when contributing to the codebase.
 Components have their own directory (that is named using a capitalized first letter) containing an `index.js` and a `style.css`. All components should be formatted using Prettier, be functional components, utilize hooks where needed, and have a test file. We use atomic design and typically start our component creation in the `/src/components/organisms/` directory. Once you've created your component it can then be refactored into smaller components that are stored in the `/src/components/molecules/` directory. The `/src/components/atoms/` directory is used to stored primitive components such as buttons and inputs.
 
 ```jsx
-
 import React from 'react';
 import Box from '../../atoms/Box';
 
-export default MyComponent() {
-	return (<Box className="my-component"></Box>);
-}
+const MyComponent = () => <Box className="my-component"></Box>;
 
+export default MyComponent;
 ```
 
 ### Styling Components
@@ -49,6 +47,6 @@ The theme that contains all of our design tokens is accessible within any compon
 
 ## Future Initiatives
 
-- Create a Storybook
-- Add tests to pipeline
-- Setup aliases for components
+-   Create a Storybook
+-   Add tests to pipeline
+-   Setup aliases for components

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // components
 import Banner from './components/organisms/Banner';
@@ -12,18 +12,15 @@ import Home from './pages/Home';
 import './theme.css';
 import './normalize.css';
 
-const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <Home />,
-	},
-]);
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
 	<React.StrictMode>
-		<Banner />
-		<RouterProvider router={router} />
+		<Router>
+			<Banner />
+			<Routes>
+				<Route exact path="/" element={<Home />}></Route>
+			</Routes>
+		</Router>
 	</React.StrictMode>
 );
