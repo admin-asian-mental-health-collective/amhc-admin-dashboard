@@ -1,6 +1,12 @@
 import React from 'react';
 import './style.css';
 
-export default function Home() {
-	return <div id="home">Home Page</div>;
-}
+import Banner from '../../components/organisms/Banner';
+
+const Home = () => (
+	<div id="home">
+		<Banner />
+	</div>
+);
+
+export default Home;

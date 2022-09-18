@@ -23,7 +23,7 @@ nav > .grid > .box:nth-child(2) {
 	text-align: right;
 }
 
-nav > .grid > .box > .link {
+nav > .grid > .box:nth-child(2) > .link {
 	color: var(--blue);
 	margin-left: var(--md);
 }

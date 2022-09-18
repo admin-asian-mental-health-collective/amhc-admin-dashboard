@@ -4,4 +4,5 @@
 	border: solid var(--xxsm) var(--blue);
 	padding: var(--sm) var(--lg);
 	border-radius: 2em;
+	background-color: rgba(0, 0, 0, 0);
 }

@@ -5,7 +5,11 @@ import Link from '../Link';
 
 const Button = ({ className, to, children, ...rest }) =>
 	to ? (
-		<Link className={concatClassName('button', className)} {...rest}>
+		<Link
+			to={to}
+			className={concatClassName('button', className)}
+			{...rest}
+		>
 			{children}
 		</Link>
 	) : (
