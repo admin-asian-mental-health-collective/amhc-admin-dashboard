@@ -30,4 +30,6 @@ body {
 	/* logos */
 	--logo: url('./assets/logo512.png');
 	--full-logo: url('./assets/banner-logo.png');
+	/* breakpoints */
+	--mobile: 700px;
 }

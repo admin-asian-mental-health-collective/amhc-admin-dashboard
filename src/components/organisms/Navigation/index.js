@@ -32,7 +32,9 @@ export default function Navigation() {
 					<Link to="/therapists">contact</Link>
 				</Box>
 				<Box>
-					<Button to="/donate">donate</Button>
+					<Link to="/donate">
+						<Button>donate</Button>
+					</Link>
 				</Box>
 			</Grid>
 		</nav>

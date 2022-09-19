@@ -31,3 +31,12 @@ nav > .grid > .box:nth-child(2) > .link {
 nav > .grid > .box > .link > .logo {
 	width: 170px;
 }
+
+@media (max-width: 700px) {
+	nav > .grid > .box:nth-child(2) > .link {
+		display: none;
+	}
+	nav > .grid > .box:nth-child(3) > .link {
+		display: none;
+	}
+}
