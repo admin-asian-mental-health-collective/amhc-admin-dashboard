@@ -12,14 +12,15 @@ import Home from './pages/Home';
 import './theme.css';
 import './normalize.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const elem = document.getElementById('root')!;
+const root = ReactDOM.createRoot(elem);
 
 root.render(
 	<React.StrictMode>
 		<Router>
 			<Navigation />
 			<Routes>
-				<Route exact path="/" element={<Home />}></Route>
+				<Route path="/" element={<Home />}></Route>
 			</Routes>
 		</Router>
 	</React.StrictMode>
