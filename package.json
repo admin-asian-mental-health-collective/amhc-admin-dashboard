@@ -17,6 +17,9 @@
 		"start": "webpack serve  --hot --open --mode development",
 		"build": "webpack --config webpack.config.js --mode production"
 	},
+	"resolutions": {
+		"styled-components": "^5"
+	},
 	"dependencies": {
 		"@types/jest": "^29.0.3",
 		"@types/node": "^18.7.18",
@@ -25,6 +28,7 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-router-dom": "^6.4.0",
+		"styled-components": "^5.3.5",
 		"typescript": "^4.8.3"
 	}
 }
