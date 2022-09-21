@@ -1,8 +1,12 @@
-import React from 'react';
 import './style.css';
 import concatClassName from '../../../helpers/classNameConcat';
+import Base from '../../../interfaces/base';
 
-function Text({ as, className, children, ...rest }) {
+interface Props extends Base {
+	as?: 'p'
+}
+
+function Text({ as, className, children, ...rest }: Props) {
 	const Elem = as ? as : 'p';
 	return (
 		<Elem className={concatClassName('text', className)} {...rest}>

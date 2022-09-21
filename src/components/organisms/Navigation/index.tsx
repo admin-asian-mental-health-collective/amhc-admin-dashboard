@@ -1,4 +1,3 @@
-import React from 'react';
 import './style.css';
 
 import Grid from '../../atoms/Grid';
@@ -9,7 +8,11 @@ import Button from '../../atoms/Button';
 
 import BannerLogo from '../../../assets/banner-logo.png';
 
-export default function Navigation() {
+import Base from '../../../interfaces/base';
+
+interface Props extends Base {}
+
+export default function Navigation({}: Props) {
 	return (
 		<nav>
 			<Box>

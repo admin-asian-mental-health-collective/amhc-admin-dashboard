@@ -1,8 +1,12 @@
-import React from 'react';
 import './style.css';
 import concatClassName from '../../../helpers/classNameConcat';
+import Base from '../../../interfaces/base';
 
-const Button = ({ className, to, children, ...rest }) => (
+interface Props extends Base {
+	to?: string;
+}
+
+const Button = ({ className, children, ...rest }: Props) => (
 	<button className={concatClassName('button', className)} {...rest}>
 		{children}
 	</button>

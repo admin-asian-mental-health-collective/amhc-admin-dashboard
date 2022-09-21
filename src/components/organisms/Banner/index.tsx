@@ -1,4 +1,3 @@
-import React from 'react';
 import './style.css';
 import Grid from '../../atoms/Grid';
 import Box from '../../atoms/Box';
@@ -6,8 +5,11 @@ import Image from '../../atoms/Image';
 import Text from '../../atoms/Text';
 import Button from '../../atoms/Button';
 import StringIllustration from '../../../assets/string-illustration.png';
+import Base from '../../../interfaces/base';
 
-const Banner = () => (
+interface Props extends Base {}
+
+const Banner = ({}: Props) => (
 	<header>
 		<Grid>
 			<Box>

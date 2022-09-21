@@ -1,9 +1,13 @@
-import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import concatClassName from '../../../helpers/classNameConcat';
 import './style.css';
+import Base from '../../../interfaces/base';
 
-const Link = ({ to, className, children, ...rest }) =>
+interface Props extends Base {
+	to: string;
+}
+
+const Link = ({ to, className, children, ...rest }: Props) =>
 	/(http(s?)):\/\//i.test(to) ? (
 		<a
 			href={to}

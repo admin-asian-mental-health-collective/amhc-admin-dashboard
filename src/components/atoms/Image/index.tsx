@@ -1,8 +1,12 @@
-import React from 'react';
 import './style.css';
 import concatClassName from '../../../helpers/classNameConcat';
+import Base from '../../../interfaces/base';
 
-const Image = ({ src, className, ...rest }) => (
+interface Props extends Base {
+	src: string;
+}
+
+const Image = ({ src, className, ...rest }: Props) => (
 	<img src={src} className={concatClassName('image', className)} {...rest} />
 );
 

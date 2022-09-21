@@ -1,12 +1,8 @@
-import React from 'react';
 import './style.css';
 import concatClassName from '../../../helpers/classNameConcat';
+import Base from '../../../interfaces/base';
 
-interface Props {
-	id?: string;
-	className?: string;
-	children?: JSX.Element;
-}
+interface Props extends Base {}
 
 const Box = ({ id, className, children, ...rest }: Props) => (
 	<div className={concatClassName('box', className)} id={id} {...rest}>
