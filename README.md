@@ -28,8 +28,12 @@ Components have their own directory (that is named using a capitalized first let
 
 ```jsx
 import Box from '../../atoms/Box';
+import styled, { StyledComponent } from 'styled-components';
+import style from './style';
 
-const MyComponent = () => <Box className="my-component"></Box>;
+const MyComponent: StyledComponent = styled(({ className }: Props) => (
+	<Box className={className}></Box>
+))(style);
 
 export default MyComponent;
 ```
@@ -38,10 +42,14 @@ export default MyComponent;
 
 The theme that contains all of our design tokens is accessible within any component style file using CSS variables.
 
-```css
-.my-component {
-	background-color: var(--green);
-}
+```ts
+import Props from './index';
+
+const style = ({ isPrimary }: Props) => ({
+	backgroundColor: `var(--${isPrimary ? 'blue' : 'pink'})`,
+});
+
+export default style;
 ```
 
 ## Future Initiatives
