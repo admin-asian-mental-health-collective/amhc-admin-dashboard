@@ -1,5 +1,3 @@
-import './style.css';
-
 import Grid from '../../atoms/Grid';
 import Box from '../../atoms/Box';
 import Image from '../../atoms/Image';
@@ -9,12 +7,14 @@ import Button from '../../atoms/Button';
 import BannerLogo from '../../../assets/banner-logo.png';
 
 import Base from '../../../interfaces/base';
+import styled, { StyledComponent } from 'styled-components';
+import style from './style';
 
 interface Props extends Base {}
 
-export default function Navigation({}: Props) {
+const Navigation: StyledComponent = styled(({ className }: Props) => {
 	return (
-		<nav>
+		<nav className={className}>
 			<Box>
 				<Link to="/amazon-smile-setup/">
 					Help AMHC and choose us as your Amazon Smile Charity! Click
@@ -42,4 +42,6 @@ export default function Navigation({}: Props) {
 			</Grid>
 		</nav>
 	);
-}
+})(style);
+
+export default Navigation;
